@@ -20,12 +20,17 @@ inquirer
   ])
   .then((response) => {
     fs.writeFile('readme.md',
-    `
-    # ${response.title}
-
-    ## Description 
-    ${response.description}
-
+    `# ${response.title}
+## Description 
+${response.description}
+## Table of Contents
+[<li> Description](#description)
+[<li> Installation](#installation)
+[<li> Usage](#usage)
+[<li> License](#license)
+[<li> Contributing](#contributing)
+[<li> Tests](#tests)
+[<li> Questions](#questions)
     `,
     (err) => {
      err ? o("Error") : o("Saved!");
