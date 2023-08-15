@@ -88,6 +88,8 @@ inquirer
     const usage = response.usage || "N/A";
     const contribution = response.contribution || "N/A";
     const test = response.test || "N/A";
+    const github = response.github || "N/A";
+    const email = response.email || "N/A";
 
 
     //Write to the README
