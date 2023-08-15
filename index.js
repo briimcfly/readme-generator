@@ -1,8 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-function o(nion){
-    console.log(nion);
+function b(ark){
+    console.log(ark);
 }
 
 inquirer
@@ -11,6 +11,12 @@ inquirer
     type: 'input',
     message: 'Title of the Project',
     name: 'title',
+    validate: (input) => {
+      if (input.trim()=== ""){
+        return "Title is required";
+      }
+      return true;
+    }
     },
     {
     type: 'input',
@@ -24,15 +30,15 @@ inquirer
 ## Description 
 ${response.description}
 ## Table of Contents
-[<li> Description](#description)
-[<li> Installation](#installation)
-[<li> Usage](#usage)
-[<li> License](#license)
-[<li> Contributing](#contributing)
-[<li> Tests](#tests)
-[<li> Questions](#questions)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
     `,
     (err) => {
-     err ? o("Error") : o("Saved!");
+     err ? b("Error") : b("Saved!");
     });
   });
