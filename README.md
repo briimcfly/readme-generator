@@ -1,6 +1,6 @@
-# This is the title
+# Testing
 ## Description 
-uhhh
+Testing
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -10,13 +10,14 @@ uhhh
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-no
+N/A
 ## Usage
-no
+N/A
 ## Contributing
-no
+N/A
 ## Tests
-uhh
+N/A
 ## License
-This project is licensed under the terms of GNU FDL v1.3 License
+This project is licensed under the terms of Creative Commons Zero v1.0 Universal License <br>
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
