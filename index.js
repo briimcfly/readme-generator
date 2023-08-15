@@ -8,14 +8,25 @@ function o(nion){
 inquirer
   .prompt([
     {
-      type: 'input',
-      message: 'What is your name?',
-      name: 'name',
-    }
+    type: 'input',
+    message: 'Title of the Project',
+    name: 'title',
+    },
+    {
+    type: 'input',
+    message: 'Write the Description',
+    name: 'description',
+    } 
   ])
   .then((response) => {
     fs.writeFile('readme.md',
-    response.name,
+    `
+    # ${response.title}
+
+    ## Description 
+    ${response.description}
+
+    `,
     (err) => {
      err ? o("Error") : o("Saved!");
     });
