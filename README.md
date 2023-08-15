@@ -1,6 +1,7 @@
-# Testing
+# This is a test 
+[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 ## Description 
-Testing
+test description yada yada yada 
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -10,14 +11,14 @@ Testing
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-N/A
+no test 
 ## Usage
-N/A
+no test
 ## Contributing
-N/A
+no test
 ## Tests
-N/A
+no test
 ## License
-This project is licensed under the terms of Creative Commons Zero v1.0 Universal License <br>
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+This project is licensed under the terms of Eclipse Public License 2.0 <br>
+
 

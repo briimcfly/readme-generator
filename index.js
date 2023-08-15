@@ -21,6 +21,10 @@ const licenses = [
   {name: `The Unlicense`, link:`[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`}
 ];
 
+const licenseChoice = () => {
+  return licenses.map(license => license.name);
+};
+
 inquirer
   .prompt([
     {
@@ -28,12 +32,7 @@ inquirer
       message: 'Title of the Project',
       name: 'title',
       //Title is Required
-      validate: (input) => {
-        if (input.trim()=== ""){
-          return "Title is required";
-        }
-        return true;
-      }
+      validate: title => !title ? 'Title is required' : true
     },
     {
       type: 'input',
@@ -63,33 +62,20 @@ inquirer
     {
       type: 'list',
       message: "Pick type of License",
-      choices: [
-        new inquirer.Separator('--- Apache:'),
-        `Apache 2.0 License`,
-        new inquirer.Separator('--- Boost:'),
-        `Boost Software License 1.0`,
-        new inquirer.Separator('--- BSD:'),
-        `BSD 3-Clause New" or "Revised" License`,
-        `BSD 2-Clause "Simplified" License`,
-        new inquirer.Separator('--- Creative Commons:'),
-        `Creative Commons Zero v1.0 Universal License`,
-        new inquirer.Separator('--- Eclipse:'),
-        `Eclipse Public License 2.0`,
-        new inquirer.Separator('--- GNU:'),
-        `GNU General Public License v3.0`,
-        `GNU Affero General Public License v3.0`,
-        `GNU Lesser General Public License v3.0`,
-        new inquirer.Separator('--- IBM:'),
-        `IBM Public License Version 1.0`,
-        new inquirer.Separator('--- MIT:'),
-        `The MIT License`,
-        new inquirer.Separator('--- Mozilla:'),
-        `Mozilla Public License 2.0`,
-        new inquirer.Separator('--- Unlicense:'),
-        `The Unlicense`
-      ],
+      choices: licenseChoice(),
       name: 'license'
-    }
+    },
+    {
+      type: 'input',
+      message: 'Enter your Github username',
+      name: 'github'
+    },
+    {    
+      type: 'input',
+      message: 'Enter your email address',
+      name:'email'
+    },
+  
 
   ])
   .then((response) => {
@@ -107,6 +93,7 @@ inquirer
     //Write to the README
     fs.writeFile('readme.md',
 `# ${title}
+${licenseBadge}
 ## Description 
 ${description}
 ## Table of Contents
@@ -127,7 +114,7 @@ ${contribution}
 ${test}
 ## License
 This project is licensed under the terms of ${license} <br>
-${licenseBadge}
+
 
 `,
     (err) => {
