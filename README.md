@@ -1,6 +1,6 @@
-# Test
+# This is the title
 ## Description 
-Testing License
+uhhh
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -10,13 +10,13 @@ Testing License
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-N/A
+no
 ## Usage
-N/A
+no
 ## Contributing
-N/A
+no
 ## Tests
-N/A
+uhh
 ## License
-This project is licensed under the terms of BSD 3-Clause License
+This project is licensed under the terms of GNU FDL v1.3 License
 
