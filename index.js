@@ -125,8 +125,8 @@ ${test}
 ${license}
 ## Questions
 If you have any questions or need further assistance, feel free to reach out to me:<br>
-* **Email:** ${email}
-* **GitHub:** [@${github}](https://github.com/${github})
+- **Email:** ${email}
+- **GitHub:** [@${github}](https://github.com/${github})
 
 
 `,
