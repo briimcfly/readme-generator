@@ -1,4 +1,4 @@
-# SampleProject
+# Sample Project
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description 
 SampleProject is a simple application designed for performing XYZ tasks. It's crafted using the ABC framework and aims to make XYZ tasks efficient and user-friendly.
