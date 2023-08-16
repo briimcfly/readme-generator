@@ -6,6 +6,7 @@ function b(ark){
 }
 
 const licenses = [
+  {name: `None`, link: ``},
   {name: `Apache 2.0 License`, link:`[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`},
   {name: `Boost Software License 1.0`, link:`[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`},
   {name: `BSD 3-Clause New" or "Revised" License`, link:`[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`},
@@ -24,6 +25,7 @@ const licenses = [
 const licenseChoice = () => {
   return licenses.map(license => license.name);
 };
+
 
 inquirer
   .prompt([
@@ -68,20 +70,25 @@ inquirer
     {
       type: 'input',
       message: 'Enter your Github username',
-      name: 'github'
+      name: 'github',
+      validate: github => !github ? 'Github is Required' : true
+
     },
     {    
       type: 'input',
       message: 'Enter your email address',
-      name:'email'
+      name:'email',
+      validate: email => !email ? 'Email is Required' : true
+
     },
   
 
   ])
   .then((response) => {
     const title = response.title;
-    const license = response.license;
+    let license = response.license;
     const licenseBadge = (licenses.find(x => x.name === license)).link; //badge
+    license = license !== 'None' ? `This project is licensed under the terms of ${license}` : 'N/A';
     //Set NA if responses are empty
     const description = response.description || "N/A";
     const installation = response.installation || "N/A";
@@ -115,7 +122,11 @@ ${contribution}
 ## Tests
 ${test}
 ## License
-This project is licensed under the terms of ${license} <br>
+${license}
+## Questions
+If you have any questions or need further assistance, feel free to reach out to me:<br>
+* **Email:** ${email}
+* **GitHub:** [@${github}](https://github.com/${github})
 
 
 `,

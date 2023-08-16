@@ -1,7 +1,7 @@
-# This is a test 
-[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+# Readme Generator
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ## Description 
-test description yada yada yada 
+this project is to yada yada
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -11,14 +11,18 @@ test description yada yada yada
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-no test 
+There are no installation instructions
 ## Usage
-no test
+yada yada
 ## Contributing
-no test
+yada yada
 ## Tests
-no test
+test it this way 
 ## License
-This project is licensed under the terms of Eclipse Public License 2.0 <br>
+This project is licensed under the terms of Apache 2.0 License
+## Questions
+If you have any questions or need further assistance, feel free to reach out to me:<br>
+* **Email:** bickel@hey.com
+* **GitHub:** [@briimcfly](https://github.com/briimcfly)
 
 
