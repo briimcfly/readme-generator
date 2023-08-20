@@ -1,10 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-function b(ark){
-    console.log(ark);
-}
-
+//Array of Licenses to link name with the license badge
 const licenses = [
   {name: `None`, link: ``},
   {name: `Apache 2.0 License`, link:`[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`},
@@ -22,6 +19,7 @@ const licenses = [
   {name: `The Unlicense`, link:`[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`}
 ];
 
+//Find the License name from the License Array
 const licenseChoice = () => {
   return licenses.map(license => license.name);
 };
@@ -30,6 +28,7 @@ const licenseChoice = () => {
 inquirer
   .prompt([
     {
+      //Title
       type: 'input',
       message: 'Title of the Project',
       name: 'title',
@@ -37,44 +36,52 @@ inquirer
       validate: title => !title ? 'Title is required' : true
     },
     {
+      //Description
       type: 'input',
       message: 'Write the Description',
       name: 'description'
     },
     {
+      //Installation Instructions
       type: 'input',
       message: 'Provide Installation Instructions',
       name: 'installation'
     },
     {
+      //Usage
       type: 'input',
       message: 'Provide Usage Information',
       name: 'usage'
     },
     {
+      //Contributing
       type: 'input',
       message: 'Provide Contribution Guidelines',
       name: 'contribution'
     },
     {
+      //Test Instrucitons
       type: 'input',
       message: 'Provide Test Instructions',
       name: 'test'
     },
     {
+      //Licenses
       type: 'list',
       message: "Pick type of License",
       choices: licenseChoice(),
       name: 'license'
     },
     {
+      //Github Username
       type: 'input',
       message: 'Enter your Github username',
       name: 'github',
       validate: github => !github ? 'Github is Required' : true
 
     },
-    {    
+    {   
+      //Email Address 
       type: 'input',
       message: 'Enter your email address',
       name:'email',
@@ -87,6 +94,7 @@ inquirer
   .then((response) => {
     const title = response.title;
     let license = response.license;
+    //Find License & Link ..
     const licenseBadge = (licenses.find(x => x.name === license)).link; //badge
     license = license !== 'None' ? `This project is licensed under the terms of ${license}` : 'N/A';
     //Set NA if responses are empty
@@ -129,8 +137,8 @@ If you have any questions or need further assistance, feel free to reach out to 
 - **GitHub:** [@${github}](https://github.com/${github})
 
 
-`,
+`, //Error
     (err) => {
-     err ? b("Error") : b("Saved!");
+     err ? console.log("Error") : console.log("Saved!");
     });
   });

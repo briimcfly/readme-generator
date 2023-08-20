@@ -27,6 +27,8 @@ The goal of this project is to create a Readme Generator that runs in the comman
 
 ![readme image](images/readme-markdown.png)
 
+A video walkthrough of the application can be viewed [here](https://drive.google.com/file/d/1_nG5QggO6_vTmKY7VNqeB9mOuDzBts1Q/view)
+
 ## Installation
 To get started with the readme generator, clone the repository from the provided link. Then, enter the project directory and use your preferred package manager to install the necessary dependencies.
 
